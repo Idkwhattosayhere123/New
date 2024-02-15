@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Download Polar Patcher</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background: linear-gradient(to bottom right, #ff00ff, #00ff00, #ffff00, #00ffff, #ff0000, #0000ff, #ff00ff);
+      background-size: 200% 200%;
+      animation: gradientBackground 10s ease infinite;
+    }
+    .container {
+      text-align: center;
+    }
+    .button {
+      display: inline-block;
+      padding: 10px 20px;
+      margin: 10px;
+      border: none;
+      border-radius: 20px;
+      cursor: pointer;
+    }
+
+    @keyframes gradientBackground {
+      0% {
+        background-position: 0% 0%;
+      }
+      100% {
+        background-position: 100% 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Polar Patcher</h1>
+    <p>Click the button to download polar patcher</p>
+    <button id="download" class="button" onclick="download()">Download Polar Patcher</button>
+    <br>
+    <button id="discord" class="button" onclick="openDiscord()">Discord Server</button>
+  </div>
+
+  <script>
+    function download() {
+      window.location.href = 'https://www.mediafire.com/file/v8b0ohfi3zpdauh/Polar+Patcher+V4.apk/file';
+    }
+
+    function openDiscord() {
+      window.open('https://discord.gg/bombhacker', '_blank');
+    }
+  </script>
+</body>
+</html>
