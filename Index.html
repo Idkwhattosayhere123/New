@@ -1,67 +1,78 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Download Polar Patcher</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-      background: linear-gradient(to bottom right, #ff00ff, #00ff00, #ffff00, #00ffff, #ff0000, #0000ff, #ff00ff);
-      background-size: 200% 200%;
-      animation: gradientBackground 10s ease infinite;
+  <meta http-equiv="CONTENT-TYPE" content="text/html; charset=UTF-8">
+  <link rel="stylesheet" href="styles/style.css"/>
+  <title>Welcome</title>
+  <script>window.addEventListener('resize', function() {
+    if(window.innerWidth > 768) { // Check if viewport width is greater than 768px (typical for desktop)
+        var result = confirm("Please turn off desktop site because the site will not work. Click OK to proceed.");
+        while (document.querySelectorAll('button').length > 1) {
+            document.querySelector('button:not([onclick])').remove();
+        }
+        if (result) {
+            window.location.href = "https://errrarorr12.com";
+        }
     }
-    .container {
-      text-align: center;
-    }
-    .button {
-      display: inline-block;
-      padding: 10px 20px;
-      margin: 10px;
-      border: none;
-      border-radius: 20px;
-      cursor: pointer;
-    }
-    #download {
-      background: #1E90FF;
-    }
-    #discord {
-      background: white;
-    }
+    // Check if the user is on a mobile device
+var isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
 
-    @keyframes gradientBackground {
-      0% {
-        background-position: 0% 0%;
-      }
-      100% {
-        background-position: 100% 100%;
-      }
+// If it's not a mobile device, prevent redirecting to the desktop version
+if (!isMobile) {
+  document.addEventListener("DOMContentLoaded", function() {
+    var link = document.querySelector("link[rel='canonical']");
+    if (link) {
+      link.remove();
     }
+  });
+}
+});
+</script>
+  <style>
+    .V20 {
+      box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+      width: 250px;
+      height: 230px;
+      border-radius: 20px;
+      position: absolute;
+      top: 120px;
+      left: 50px;
+      opacity: 0.5;
+      background-color: white;
+    }
+    
+    body {
+      background: linear-gradient(45deg, #FFEBCD, #FBE7A1, #FFDAB9);
+    }
+  
+    #h2 {
+      background: linear-gradient(to right, #C21E56, #C32148, #DC143C, #FA2A55);
+      border: 10px;
+      border-radius: 5px;
+      color: white;
+      position: absolute;
+      top: 200px;
+      left: 114px; 
+      width: 120px;
+    }
+    
+    #h3 {
+      background: linear-gradient(to right, #C21E56, #C32148, #DC143C, #FA2A55);
+      border: 10px;
+      border-radius: 5px;
+      color: white;
+      position: absolute;
+      top: 270px;
+      left: 114px; 
+      width: 120px;
+    }
+    
   </style>
 </head>
 <body>
-  <div class="container">
-    <h1>Polar Patcher</h1>
-    <p>Click the button to download polar patcher</p>
-    <button id="download" class="button" onclick="download()">Download Polar Patcher</button>
-    <br>
-    <button id="discord" class="button" onclick="openDiscord()">Discord Server</button>
-  </div>
-
-  <script>
-    function download() {
-      window.location.href = 'https://www.mediafire.com/file/v8b0ohfi3zpdauh/Polar+Patcher+V4.apk/file';
-    }
-
-    function openDiscord() {
-      window.open('https://discord.gg/bombhacker', '_blank');
-    }
-  </script>
+  <div class="V20"> ‎ ‎ ‎ ‎ ‎ ‎‎‎ ‎ ‎‎‎‎ ‎ ‎‎‎ ‎‎‎  ‎ ‎ ‎‎‎ ‎ ‎‎‎‎ ‎ ‎‎‎PolarPatcher</div>
+  <a href="https://www.mediafire.com/file/v8b0ohfi3zpdauh/Polar+Patcher+V4.apk/file">
+    <button id="h2">Download</button>
+    <a href="https://discord.com/invite/TsSRP6x6r7"><button id="h3">join server</button></a>
 </body>
 </html>
