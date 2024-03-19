@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PolarPatcher</title>
+<script>
+  function adjustStyles() {
+    var deviceWidth = window.innerWidth;
+
+    if (deviceWidth > 1200) { // Adjust styles if device width is greater than 1200px (for laptops or computers)
+        document.body.style.fontSize = '55px';
+        var containers = document.querySelectorAll('.container');
+        containers.forEach(function(container) {
+            container.style.width = '400px';
+        });
+        var buttons = document.querySelectorAll('button');
+        buttons.forEach(function(button) {
+            button.style.fontSize = '55px';
+            button.style.padding = '30px 60px';
+        });
+    } else if (deviceWidth > 768) { // Adjust styles if device width is greater than 768px (for larger devices)
+        document.body.style.fontSize = '15px';
+        var containers = document.querySelectorAll('.container');
+        containers.forEach(function(container) {
+            container.style.width = '440px';
+        });
+        var buttons = document.querySelectorAll('button');
+        buttons.forEach(function(button) {
+            button.style.fontSize = '20px';
+            button.style.padding = '23px 34px';
+        });
+    } else { // Reset styles to defaults (for smaller devices)
+        document.body.style.fontSize = '14px';
+        var containers = document.querySelectorAll('.container');
+        containers.forEach(function(container) {
+            container.style.width = '300px';
+        });
+        var buttons = document.querySelectorAll('button');
+        buttons.forEach(function(button) {
+            button.style.fontSize = '14px';
+            button.style.padding = '10px 20px';
+        });
+    }
+}
+
+// Call adjustStyles initially and on window resize
+adjustStyles();
+window.addEventListener('resize', adjustStyles);
+</script>
+<style>
+.container {
+  max-width: 200%;
+  max-height: 200%;
+  width: 250px;
+  height: 250px;
+  background-color: white;
+  padding: 20px;
+  box-sizing: border-box; /* Include padding and border in the element's total width and height */
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -40%);
+  box-shadow: 0px 1px 4px rgba(0, 0, 0, 7.0);
+  border-radius: 5px;
+}
+#h {
+  background: linear-gradient(35deg, #E42217, #C11B17, #FD1C03, #FF0000);
+  border: 10px;
+  border-radius: 5px;
+  position: absolute;
+  top: 150px;
+  left: 45px;
+  width: 160px;
+  }
+  
+  #h1 {
+  background: linear-gradient(35deg, #E42217, #C11B17, #FD1C03, #FF0000);
+  border: 10px;
+  border-radius: 5px;
+  position: absolute;
+  top: 100px;
+  left: 45px;
+  width: 160px;
+  }
+  
+  /* Media query for devices with a max-width of 768px (e.g., tablets and smartphones) */
+@media only screen and (max-width: 768px) {
+  body {
+    justify-content: flex-start;
+  }
+}
+  
+  body {
+    background: linear-gradient(35deg, #FFEBCD, #FBE7A1, #FFDAB9);
+    }
+</style>
+</head>
+<body>
+
+<div class="container">
+  <h2>PolarPatcher</h2>
+  <a href="https://www.mediafire.com/file/v8b0ohfi3zpdauh/Polar+Patcher+V4.apk/file"><button id="h">Download</button></a>
+  <a href="https://discord.com/invite/TsSRP6x6r7"><button id="h1">Join server</button></a>
+</div>
+
+</body>
+</html>
